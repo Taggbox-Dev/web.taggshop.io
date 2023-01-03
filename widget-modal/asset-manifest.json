@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/widget-modal/static/css/main.397fc9b8.chunk.css",
+    "main.js": "/widget-modal/static/js/main.a08fb8f6.chunk.js",
+    "main.js.map": "/widget-modal/static/js/main.a08fb8f6.chunk.js.map",
+    "runtime-main.js": "/widget-modal/static/js/runtime-main.516e9e9b.js",
+    "runtime-main.js.map": "/widget-modal/static/js/runtime-main.516e9e9b.js.map",
+    "static/css/2.92d127a8.chunk.css": "/widget-modal/static/css/2.92d127a8.chunk.css",
+    "static/js/2.cf7171c3.chunk.js": "/widget-modal/static/js/2.cf7171c3.chunk.js",
+    "static/js/2.cf7171c3.chunk.js.map": "/widget-modal/static/js/2.cf7171c3.chunk.js.map",
+    "index.html": "/widget-modal/index.html",
+    "precache-manifest.fed9ce40a4a76b0795c491a5f17daadf.js": "/widget-modal/precache-manifest.fed9ce40a4a76b0795c491a5f17daadf.js",
+    "service-worker.js": "/widget-modal/service-worker.js",
+    "static/css/2.92d127a8.chunk.css.map": "/widget-modal/static/css/2.92d127a8.chunk.css.map",
+    "static/css/main.397fc9b8.chunk.css.map": "/widget-modal/static/css/main.397fc9b8.chunk.css.map",
+    "static/js/2.cf7171c3.chunk.js.LICENSE.txt": "/widget-modal/static/js/2.cf7171c3.chunk.js.LICENSE.txt",
+    "static/media/all-fonts.css": "/widget-modal/static/media/airbnb.d007ed84.woff",
+    "static/media/font-awesome.min.css": "/widget-modal/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.516e9e9b.js",
+    "static/css/2.92d127a8.chunk.css",
+    "static/js/2.cf7171c3.chunk.js",
+    "static/css/main.397fc9b8.chunk.css",
+    "static/js/main.a08fb8f6.chunk.js"
+  ]
+}

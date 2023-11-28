@@ -1,3 +1,9 @@
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
 /*!
  * Masonry v4.2.2
  * Cascading grid layout library
@@ -13,6 +19,13 @@
  */
 
 /*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+/*!
  * getSize v2.0.3
  * measure size of elements
  * MIT license
@@ -23,3 +36,9 @@
  * JavaScript is all like "You images are done yet or what?"
  * MIT License
  */
+
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+//! moment.js

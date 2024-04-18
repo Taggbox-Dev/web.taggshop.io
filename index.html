@@ -3,6 +3,9 @@
     <link rel="preconnect" href="https://web.taggshop.io/" crossorigin>
     <link rel="preconnect" href="https://test.taggbox.com/" crossorigin>
     <link rel="preconnect" href="https://cloud.taggbox.com/" crossorigin>
+</head>
+<body>
+    <h1>Taggshops Test Embed</h1>
     <script>
         function getQueryParams() {
             var params = {};
@@ -16,13 +19,13 @@
             var params = getQueryParams();
             var wallId = params['wallId'] || '9473'; // Replace 'defaultWallId' with a default value if needed
             var source = params['source'] || 'website'; // Replace 'defaultSource' with a default value if needed
-            document.getElementById("tagshop-socialwall").setAttribute("data-wall-id", wallId);
-            document.getElementById("tagshop-socialwall").setAttribute("data-source", source);
+            var tagshopSocialWall = document.getElementById("tagshop-socialwall");
+            if (tagshopSocialWall) {
+                tagshopSocialWall.dataset.wallId = wallId;
+                tagshopSocialWall.dataset.source = source;
+            }
         });
     </script>
-</head>
-<body>
-    <h1>Taggshops Test Embed</h1>
     <div class="taggbox-container" style="width:100%;height:100%;overflow: auto;">
         <div class="tagshop" style="width:100%;height:100%;overflow: auto;">
             <div id="tagshop-socialwall" class="tagshop-socialwall"></div>

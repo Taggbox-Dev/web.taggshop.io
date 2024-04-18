@@ -25,7 +25,7 @@ var ApplicationEmbed =
             "0" == t[e].getAttribute("data-is-load") ||
             null == t[e].getAttribute("data-is-load")
           ) {
-            const a = "https://web.taggshop.io/embed.json",
+            const a = "https://web.taggshop.io/embed_b.json",
               n = `root_${i(5)}`;
             t[e].setAttribute("data-render-id", n),
               t[e].setAttribute("data-is-load", 0),

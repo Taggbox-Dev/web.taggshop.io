@@ -8,6 +8,17 @@
 
 <body>
     <script>
+
+        function generateRandomString(length) {
+            var result = '';
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            var charactersLength = characters.length;
+            for (var i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
+        }
+
         function getQueryParams() {
             var params = {};
             location.search.slice(1).split("&").forEach(function (pair) {
@@ -32,7 +43,8 @@
             tagshopSocialWall.setAttribute("data-wall-id", wallId);
             tagshopSocialWall.setAttribute("data-source", source);
             var script = document.createElement("script");
-            script.setAttribute("src", "https://web.taggshop.io/publish.min_b.js");
+            var randomString = generateRandomString(10);
+            script.setAttribute("src", `https://web.taggshop.io/publish.min_b.js?${randomString}`);
             script.setAttribute("type", "text/javascript");
             tagshop.appendChild(tagshopSocialWall);
             tagshop.appendChild(script);

@@ -1,37 +1,45 @@
 <html>
+
 <head>
     <link rel="preconnect" href="https://web.taggshop.io/" crossorigin>
     <link rel="preconnect" href="https://test.taggbox.com/" crossorigin>
     <link rel="preconnect" href="https://cloud.taggbox.com/" crossorigin>
 </head>
+
 <body>
-    <h1>Taggshops Test Embed</h1>
     <script>
         function getQueryParams() {
             var params = {};
-            location.search.slice(1).split("&").forEach(function(pair) {
+            location.search.slice(1).split("&").forEach(function (pair) {
                 pair = pair.split("=");
                 params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || "");
             });
             return params;
         }
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             var params = getQueryParams();
             var wallId = params['wallId'] || '9473'; // Replace 'defaultWallId' with a default value if needed
             var source = params['source'] || 'website'; // Replace 'defaultSource' with a default value if needed
-            var tagshopSocialWall = document.getElementById("tagshop-socialwall");
-            if (tagshopSocialWall) {
-                tagshopSocialWall.dataset.wallId = wallId;
-                tagshopSocialWall.dataset.source = source;
-            }
+            var taggboxContainer = document.createElement("div");
+            taggboxContainer.setAttribute("class", "taggbox-container");
+            taggboxContainer.setAttribute("style", "width:100%;height:100%;overflow: auto;");
+            var tagshop = document.createElement("div");
+            tagshop.setAttribute("class", "tagshop");
+            tagshop.setAttribute("style", "width:100%;height:100%;overflow: auto;");
+            var tagshopSocialWall = document.createElement("div");
+            tagshopSocialWall.setAttribute("id", "tagshop-socialwall");
+            tagshopSocialWall.setAttribute("class", "tagshop-socialwall");
+            tagshopSocialWall.setAttribute("data-wall-id", wallId);
+            tagshopSocialWall.setAttribute("data-source", source);
+            var script = document.createElement("script");
+            script.setAttribute("src", "https://web.taggshop.io/publish.min_b.js");
+            script.setAttribute("type", "text/javascript");
+            tagshop.appendChild(tagshopSocialWall);
+            tagshop.appendChild(script);
+            taggboxContainer.appendChild(tagshop);
+            document.body.appendChild(taggboxContainer);
         });
     </script>
-    <div class="taggbox-container" style="width:100%;height:100%;overflow: auto;">
-        <div class="tagshop" style="width:100%;height:100%;overflow: auto;">
-            <div id="tagshop-socialwall" class="tagshop-socialwall"></div>
-            <script src="https://web.taggshop.io/publish.min_b.js" type="text/javascript"></script>
-        </div>
-    </div>
 </body>
 
 </html>

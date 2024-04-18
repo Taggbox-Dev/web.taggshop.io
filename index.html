@@ -29,7 +29,8 @@
         }
         document.addEventListener("DOMContentLoaded", function () {
             var params = getQueryParams();
-            var wallId = params['wallId'] || '9473'; // Replace 'defaultWallId' with a default value if needed
+            var website = params['website'] ; // Replace 'defaultWallId' with a default value if needed
+            var wallId = params['wallId']; // Replace 'defaultWallId' with a default value if needed
             var source = params['s']== 1 ? '' : 'website'; // Replace 'defaultSource' with a default value if needed
             var taggboxContainer = document.createElement("div");
             taggboxContainer.setAttribute("class", "taggbox-container");
@@ -40,8 +41,8 @@
             var tagshopSocialWall = document.createElement("div");
             tagshopSocialWall.setAttribute("id", "tagshop-socialwall");
             tagshopSocialWall.setAttribute("class", "tagshop-socialwall");
-            tagshopSocialWall.setAttribute("data-wall-id", wallId);
-            tagshopSocialWall.setAttribute("data-source", source);
+            tagshopSocialWall.setAttribute("data-wall-id", wallId || website);
+            if(website) tagshopSocialWall.setAttribute("data-source", 'website');
             var script = document.createElement("script");
             var randomString = generateRandomString(10);
             script.setAttribute("src", `https://web.taggshop.io/publish.min_b.js?${randomString}`);

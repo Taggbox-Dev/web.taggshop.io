@@ -30,7 +30,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             var params = getQueryParams();
             var wallId = params['wallId'] || '9473'; // Replace 'defaultWallId' with a default value if needed
-            var source = params['source'] || 'website'; // Replace 'defaultSource' with a default value if needed
+            var source = params['s']== 1 ? '' : 'website'; // Replace 'defaultSource' with a default value if needed
             var taggboxContainer = document.createElement("div");
             taggboxContainer.setAttribute("class", "taggbox-container");
             taggboxContainer.setAttribute("style", "width:100%;height:100%;overflow: auto;");
